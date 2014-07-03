@@ -83,6 +83,9 @@ Pod::Spec.new do |s|
 
   s.source_files  = "include/*.h"
 
+  s.ios.library = "libev-ios"
+  s.osx.library = "libev-osx"
+
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
@@ -107,5 +110,6 @@ Pod::Spec.new do |s|
         "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/libev/include/",
         "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)/libev/lib",
     }
+
 
 end
