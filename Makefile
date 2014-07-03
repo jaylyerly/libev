@@ -1,10 +1,10 @@
 
 SRCDIR=src/libev-4.15
 
-LIBS=$(SRCDIR)/libev-ios.a \
+LIB_FILES=$(SRCDIR)/libev-ios.a \
     $(SRCDIR)/libev-osx.a
 
-INCLUDES=$(SRCDIR)/ev++.h  \
+INCLUDE_FILES=$(SRCDIR)/ev++.h  \
     $(SRCDIR)/ev.h  \
     $(SRCDIR)/ev_vars.h  \
     $(SRCDIR)/ev_wrap.h  \
@@ -16,15 +16,15 @@ INCLUDES=$(SRCDIR)/ev++.h  \
 all: libev
 
 libev:
-	pushd $(SRCDIR) && ../../compile.py && popd
+	cd $(SRCDIR) && $(CURDIR)/compile.py && cd $(CURDIR)
 	-mkdir lib
-	cp $(LIBS) lib
+	cp $(LIB_FILES) lib
 	-mkdir include
-	-cp $(INCLUDES) include
+	-cp $(INCLUDE_FILES) include
 
 clean:
-	-make -C $(SRCDIR) distclean
-	-rm -f $(LIBS)
+	-$(MAKE) -C $(SRCDIR) distclean
+	-rm -f $(LIB_FILES)
 	
 export
 test:
