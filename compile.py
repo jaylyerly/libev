@@ -6,11 +6,11 @@ import subprocess
 
 all_libs = {
     'ios': [
-        { "ARCH":"armv7", "SDK":"iphoneos", "MIN_IOS_VER":"-miphoneos-version-min=7.0", "HOST":"--host=armv7-apple-darwin7" },
-        { "ARCH":"armv7s", "SDK":"iphoneos", "MIN_IOS_VER":"-miphoneos-version-min=7.0", "HOST":"--host=armv7-apple-darwin7" },
-        { "ARCH":"arm64", "SDK":"iphoneos", "MIN_IOS_VER":"-miphoneos-version-min=7.0", "HOST":"--host=armv7-apple-darwin7" },
-        { "ARCH":"i386", "SDK":"iphonesimulator", "MIN_IOS_VER":"-miphoneos-version-min=7.0", "HOST":"--host=armv7-apple-darwin7" },
-        { "ARCH":"x86_64", "SDK":"iphonesimulator", "MIN_IOS_VER":"-miphoneos-version-min=7.0", "HOST":"--host=armv7-apple-darwin7" },
+        { "ARCH":"armv7", "SDK":"iphoneos", "MIN_IOS_VER":"-miphoneos-version-min=6.0", "HOST":"--host=armv7-apple-darwin7" },
+        { "ARCH":"armv7s", "SDK":"iphoneos", "MIN_IOS_VER":"-miphoneos-version-min=6.0", "HOST":"--host=armv7-apple-darwin7" },
+        { "ARCH":"arm64", "SDK":"iphoneos", "MIN_IOS_VER":"-miphoneos-version-min=6.0", "HOST":"--host=armv7-apple-darwin7" },
+        { "ARCH":"i386", "SDK":"iphonesimulator", "MIN_IOS_VER":"-miphoneos-version-min=6.0", "HOST":"--host=armv7-apple-darwin7" },
+        { "ARCH":"x86_64", "SDK":"iphonesimulator", "MIN_IOS_VER":"-miphoneos-version-min=6.0", "HOST":"--host=armv7-apple-darwin7" },
         
     ],
     'osx': [

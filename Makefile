@@ -11,7 +11,7 @@ INCLUDE_FILES=$(SRCDIR)/ev++.h  \
     $(SRCDIR)/event.h 
 
 
-.PHONY: all clean libev
+.PHONY: all clean libev distclean
 
 all: libev
 
@@ -25,6 +25,10 @@ libev:
 clean:
 	-$(MAKE) -C $(SRCDIR) distclean
 	-rm -f $(LIB_FILES)
+
+distclean: clean
+	-rm -rf lib
+	-rm -rf include
 	
 export
 test:
